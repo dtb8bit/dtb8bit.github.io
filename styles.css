@@ -16,7 +16,6 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  overflow-x: hidden; /* Prevent overall page horizontal scroll */
 }
 
 /* Container styling */
@@ -24,7 +23,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Ensure the container takes up full width */
 }
 
 /* Title styling */
@@ -35,7 +33,6 @@ body {
   letter-spacing: 3px;
   text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.8);
   margin-bottom: 20px;
-  word-wrap: break-word; /* Prevent title from overflowing */
 }
 
 /* Image container styling */
@@ -61,23 +58,18 @@ body {
 .social-links {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
+  gap: 20px;
   margin-top: 30px;
-  width: 100%;
-  overflow-x: auto;  /* Enables horizontal scroll on overflow */
-  padding-bottom: 10px;
-  padding-left: 10px; /* Add some space on the left */
+  margin-right: 180px;
 }
 
 /* Social icon item styling */
 .social-icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0; /* Prevent shrinking of icons */
 }
 
 .social-icon img {
@@ -89,22 +81,4 @@ body {
 
 .social-icon:hover img {
   transform: scale(1.2);
-}
-
-/* Media Query for smaller screens (mobile) */
-@media (max-width: 600px) {
-  .title {
-    font-size: 32px;
-  }
-
-  .social-links {
-    gap: 10px;
-    flex-wrap: nowrap;  /* Prevent the icons from stacking */
-    justify-content: center; /* Center social icons */
-  }
-
-  .social-icon {
-    width: 60px;  /* Smaller icon size */
-    height: 60px;
-  }
 }
