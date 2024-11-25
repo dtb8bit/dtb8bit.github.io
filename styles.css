@@ -65,19 +65,22 @@ body {
   gap: 20px;
   margin-top: 30px;
   flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+  width: 100%; /* Ensure the container takes full width of the parent */
+  max-width: 400px; /* Restrict the maximum width */
 }
 
 /* Social icon item styling */
 .social-icon {
-  width: 50px; /* Adjust size of icons */
-  height: 50px;
+  width: 10%; /* Make social icons responsive, width will scale */
+  max-width: 60px; /* Set maximum size */
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .social-icon img {
-  width: 100%;
+  width: 100%; /* The images will take the full width of their container */
   height: 100%;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;
@@ -98,13 +101,13 @@ body {
   }
 
   .social-links {
-    margin-top: 20px;
-    justify-content: center;
+    max-width: 300px; /* Shrink the icon container further on tablets */
+    gap: 15px; /* Adjust spacing */
   }
 
   .social-icon {
-    width: 40px; /* Smaller social icons on mobile */
-    height: 40px;
+    width: 15%; /* Slightly increase icon size on medium screens */
+    max-width: 50px;
   }
 }
 
@@ -114,12 +117,14 @@ body {
   }
 
   .social-icon {
-    width: 35px; /* Even smaller icons for small devices */
-    height: 35px;
+    width: 20%; /* Increase icon size to make them more visible on small screens */
+    max-width: 40px;
   }
 
   .social-links {
     flex-direction: column; /* Stack the social icons vertically */
     gap: 15px;
+    max-width: 280px; /* Further reduce the width */
   }
 }
+
